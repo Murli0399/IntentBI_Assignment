@@ -21,4 +21,5 @@ This is a simple web application for managing car data. It allows users to add, 
 ## Installation
 
 1. Clone the repository:
+   `https://github.com/Murli0399/IntentBI_Assignment.git`
 
