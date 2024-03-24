@@ -7,7 +7,7 @@ homeBtn.addEventListener('click', () => {
 
 const form = document.getElementById('carForm');
 
-
+// Adding car details
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(form);

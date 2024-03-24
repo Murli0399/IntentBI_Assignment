@@ -14,7 +14,7 @@ nav {
     padding: 0 30px;
 }
 
-nav h1 {
+nav h1{
     cursor: pointer;
 }
 
@@ -71,8 +71,7 @@ form select {
     font-size: 17px;
 }
 
-form input[type="submit"],
-input[type="button"] {
+form input[type="submit"] {
     margin-top: 20px;
     background-color: #34af38;
     color: white;
@@ -83,10 +82,6 @@ input[type="button"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #217425;
-}
-
-form input[type="button"]:hover {
     background-color: #217425;
 }
 

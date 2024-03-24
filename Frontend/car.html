@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Details</title>
-    <link rel="stylesheet" href="/css/car.css">
+    <title>Car Detail</title>
+    <link rel="stylesheet" href="css/car.css">
 </head>
 
-
 <body>
-
     <nav>
-        <h1>Car Management</h1>
+        <h1 id="index">Car Management</h1>
         <h2>Admin</h2>
     </nav>
     <div class="heading">
@@ -22,12 +20,17 @@
     <form id="carForm">
         <div class="part left">
             <div class="form-group">
-                <label for="vin">VIN:</label>
-                <input type="text" id="vin" name="vin" required>
+                <label for="id">Id:</label>
+                <input type="number" id="id" name="id" required>
             </div>
+
             <div class="form-group">
                 <label for="year">Year:</label>
                 <input type="number" id="year" name="year" min="1900" max="2099" required>
+            </div>
+            <div class="form-group">
+                <label for="vehicleType">Vehicle Type:</label>
+                <input type="text" name="vehicleType" id="vehicleType" required>
             </div>
             <div class="form-group">
                 <label for="make">Make:</label>
@@ -62,11 +65,19 @@
                 <input type="text" id="exteriorColor" name="exteriorColor" required>
             </div>
             <div class="form-group">
-                <label for="drivetrain">Drivetrain:</label>
-                <input type="text" id="drivetrain" name="drivetrain" required>
+                <input type="submit" value="Update">
+                <input type="button" id="deleteButton" value="Delete">
             </div>
         </div>
         <div class="part right">
+            <div class="form-group">
+                <label for="vin">VIN:</label>
+                <input type="text" id="vin" name="vin" required>
+            </div>
+            <div class="form-group">
+                <label for="drivetrain">Drivetrain:</label>
+                <input type="text" id="drivetrain" name="drivetrain" required>
+            </div>
             <div class="form-group">
                 <label for="cylinders">Cylinders:</label>
                 <input type="number" id="cylinders" name="cylinders" min="1" required>
@@ -103,43 +114,12 @@
                 <label for="trimR">Trim R:</label>
                 <input type="text" id="trimR" name="trimR" required>
             </div>
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
+
         </div>
 
 
     </form>
 
-    <script>
-        function validateForm() {
-            var vin = document.getElementById('vin').value;
-            var year = document.getElementById('year').value;
-            var make = document.getElementById('make').value;
-            var model = document.getElementById('model').value;
-            var price = document.getElementById('price').value;
-            var sellerType = document.getElementById('sellerType').value;
-            var source = document.getElementById('source').value;
-
-            if (!vin || !year || !make || !model || !price || !sellerType || !source) {
-                alert("All fields are required!");
-                return false;
-            }
-
-            if (year < 1900 || year > 2099) {
-                alert("Please enter a valid year!");
-                return false;
-            }
-
-            if (price < 0) {
-                alert("Price cannot be negative!");
-                return false;
-            }
-
-            return true;
-        }
-    </script>
-
 </body>
-
+<script src="js/car.js"></script>
 </html>

@@ -87,6 +87,10 @@ function displayData(arr) {
         td7.innerText = "View Details";
         td7.style.cursor = 'pointer';
         td7.style.color = 'blue';
+        td7.addEventListener('click', () => {
+            localStorage.setItem('carId',el.id);
+            location.href = "car.html";
+        })
         tr.append(td1, td2, td3, td4, td5, td6, td7);
         cont.append(tr);
     })
@@ -96,6 +100,7 @@ function displayData(arr) {
 homeBtn.addEventListener('click', () => {
     location.href = 'index.html';
 })
+
 uploadButton.addEventListener('click', function () {
     const selectedFile = fileUpload.files[0];
 
