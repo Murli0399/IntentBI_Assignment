@@ -14,7 +14,7 @@ nav {
     padding: 0 30px;
 }
 
-nav h1{
+nav h1 {
     cursor: pointer;
 }
 
@@ -55,4 +55,44 @@ nav h1{
 
 .heading .button p:hover {
     background-color: rgb(16, 16, 146);
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    /* border: 1px solid red; */
+    background-color: rgb(223 223 255);
+}
+
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container table td,
+th {
+    border: none;
+}
+
+.container table thead {
+    text-align: center;
+    background-color: blue;
+    height: 40px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.container table tbody {
+    text-align: center;
+}
+
+.container table tbody tr {
+    height: 40px;
+}
+
+tbody:before {
+    content: "-";
+    display: block;
+    line-height: 1em;
+    color: white;
 }

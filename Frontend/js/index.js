@@ -5,6 +5,7 @@ const myModal = document.getElementById('myModal');
 const addNewCar = document.getElementById('add-new');
 const homeBtn = document.getElementById('index');
 const message = document.getElementById('message');
+const cont = document.getElementById('tbody');
 const baseURL = "http://localhost:8080/api/cars";
 
 uploadJson.addEventListener('click', () => {
@@ -14,6 +15,82 @@ uploadJson.addEventListener('click', () => {
 addNewCar.addEventListener('click', () => {
     location.href = 'register.html';
 })
+
+fetch(baseURL + '/all')
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Failed to fetch cars: ' + response.statusText);
+        }
+    })
+    .then(data => {
+        // Array to store cars
+        const carsArray = [];
+
+        // Iterate through the data and push each car to the array
+        data.forEach(car => {
+            const carObj = {
+                id: car.id,
+                vin: car.vin,
+                year: car.year,
+                vehicleType: car.vehicleType,
+                make: car.make,
+                model: car.model,
+                price: car.price,
+                sellerType: car.sellerType,
+                source: car.source,
+                interiorColor: car.interiorColor,
+                exteriorColor: car.exteriorColor,
+                drivetrain: car.drivetrain,
+                cylinders: car.cylinders,
+                bodySubtype: car.bodySubtype,
+                doors: car.doors,
+                madeIn: car.madeIn,
+                trim: car.trim,
+                engine: car.engine,
+                engineSize: car.engineSize,
+                fuelType: car.fuelType,
+                trimR: car.trimR
+            };
+
+            carsArray.push(carObj);
+        });
+
+        console.log('Cars Array:', carsArray);
+        displayData(carsArray);
+        // Now you have an array of cars
+    })
+    .catch(error => {
+        console.error('Error occurred while fetching cars:', error);
+        // Handle network errors or other exceptions
+    });
+
+
+function displayData(arr) {
+    cont.innerHTML = null;
+    arr.forEach((el, ind) => {
+        let tr = document.createElement('tr');
+        let td1 = document.createElement('td');
+        td1.innerText = el.id;
+        let td2 = document.createElement('td');
+        td2.innerText = el.vehicleType;
+        let td3 = document.createElement('td');
+        td3.innerText = el.price;
+        let td4 = document.createElement('td');
+        td4.innerText = el.year;
+        let td5 = document.createElement('td');
+        td5.innerText = el.fuelType;
+        let td6 = document.createElement('td');
+        td6.innerText = el.madeIn;
+        let td7 = document.createElement('td');
+        td7.innerText = "View Details";
+        td7.style.cursor = 'pointer';
+        td7.style.color = 'blue';
+        tr.append(td1, td2, td3, td4, td5, td6, td7);
+        cont.append(tr);
+    })
+}
 
 
 homeBtn.addEventListener('click', () => {

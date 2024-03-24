@@ -5,28 +5,6 @@ homeBtn.addEventListener('click', () => {
     location.href = 'index.html';
 })
 
-
-// const vin = document.getElementById('vin');
-// const year = document.getElementById('year');
-// const vehicleType = document.getElementById('vehicleType');
-// const make = document.getElementById('make');
-// const model = document.getElementById('model');
-// const price = document.getElementById('price');
-// const sellerType = document.getElementById('sellerType');
-// const source = document.getElementById('source');
-// const interiorColor = document.getElementById('interiorColor');
-// const exteriorColor = document.getElementById('exteriorColor');
-// const drivetrain = document.getElementById('drivetrain');
-// const cylinders = document.getElementById('cylinders');
-// const bodySubtype = document.getElementById('bodySubtype');
-// const doors = document.getElementById('doors');
-// const madeIn = document.getElementById('madeIn');
-// const trim = document.getElementById('trim');
-// const engine = document.getElementById('engine');
-// const engineSize = document.getElementById('engineSize');
-// const fuelType = document.getElementById('fuelType');
-// const trimR = document.getElementById('trimR');
-
 const form = document.getElementById('carForm');
 
 
@@ -74,11 +52,10 @@ form.addEventListener('submit', (event) => {
             }
         })
         .then(data => {
-            console.log('Car added successfully:', data);
-            // Handle success, like showing a success message or redirecting to another page
+            alert('Car added successfully:', data);
+            location.href = "index.html";
         })
         .catch(error => {
-            console.error('Error occurred while adding car:', error);
-            // Handle network errors or other exceptions
+            alert('Error occurred while adding car:', error);
         });
 })
