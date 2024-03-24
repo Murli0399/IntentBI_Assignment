@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/model.css">
+</head>
+
+<body>
+
+    <nav>
+        <h1 id="index">Car Management</h1>
+        <h2>Admin</h2>
+    </nav>
+
+    <div class="heading">
+        <div class="h3">
+            <h3>Car Details</h3>
+        </div>
+        <div class="button">
+            <p id="add-new">Add New Car</p>
+            <p id="upload-json">Upload Json</p>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h4>Upload File</h4>
+            <input type="file" id="file-upload" accept=".txt, .json">
+            <button id="upload-button">Upload File</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+
+</body>
+<script src="js/index.js"></script>
+</html>

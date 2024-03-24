@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    height: 50px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav h1{
+    cursor: pointer;
+}
+
+.heading {
+    width: 80%;
+    margin: 20px auto;
+    color: blue;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#carForm {
+    width: 80%;
+    margin: auto;
+    background-color: #3759d4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.part {
+    width: 48%;
+}
+
+form label {
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #dadada;
+    font-size: 18px;
+}
+
+form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+    font-size: 17px;
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    background-color: #34af38;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #217425;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}

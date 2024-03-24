@@ -1,0 +1,23 @@
+{
+    "id": null,
+    "vin": "3GTU2PEJXJG538952",
+    "year": 2018,
+    "vehicleType": "Truck",
+    "drivetrain": "4-Wheel Drive",
+    "cylinders": 86,
+    "body_subtype": "Crew Cab",
+    "doors": 4,
+    "made_in": "Mexico",
+    "trim": "Denali",
+    "engine": "L86 - SIDI: Spark Ignited Direct Injection, VVT: V, VVT: V",
+    "model": "Sierra 1500",
+    "engine_size": 6.2,
+    "fuel_type": "Gasoline",
+    "trim_r": "Denali",
+    "make": "GMC",
+    "price": 52674,
+    "sellerType": "dealer",
+    "source": "www.beamanauto.com",
+    "interior_color": "JET BLACK",
+    "exterior_color": "Dark Slate Metallic"
+}
