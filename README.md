@@ -51,13 +51,20 @@ Contributions are welcome! Please follow these steps:
 5. Push to the branch (`git push origin feature/my-feature`)
 6. Create a new Pull Request
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 🔗 Contact Me
 
-## Contact
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://murli0399.github.io/)
 
-For any inquiries or suggestions, feel free to contact [Your Name](mailto:youremail@example.com).
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/murli-khaire/)
 
 
+## Authors
+
+- [Murli Khaire](https://github.com/Murli0399)
+
+
+## Acknowledgements
+
+- [Masai School](https://www.masaischool.com/)
 
