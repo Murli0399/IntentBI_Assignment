@@ -1,9 +1,10 @@
 # Car Management System
 
-This is a simple web application for managing car data. It allows users to add, view, update, and delete car information.
+This is a basic web app for managing car data. Users can add, view, update, and delete car information.
 
 ## Features
 
+- Upload a JSON file to add multiple car details in bulk.
 - Add a new car with various details such as VIN, year, make, model, price, etc.
 - View a list of all cars in the database.
 - Sort cars by different criteria.
