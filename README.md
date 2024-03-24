@@ -21,5 +21,43 @@ This is a simple web application for managing car data. It allows users to add, 
 ## Installation
 
 1. Clone the repository:
-   `https://github.com/Murli0399/IntentBI_Assignment.git`
+   `
+   git clonehttps://github.com/Murli0399/IntentBI_Assignment.git
+   `
+
+2. Navigate to the project directory:
+
+3. Build the project using Maven:
+
+4. Run the Spring Boot application:
+
+5. Access the application in your web browser at [http://localhost:8080](http://localhost:8080).
+
+## Usage
+
+- Upon accessing the application, you'll see a list of cars if any exist in the database.
+- You can add a new car by clicking on the "Add Car" button and filling out the form.
+- Existing cars can be updated or deleted by clicking on the corresponding buttons next to each car entry.
+- You can also sort the list of cars by clicking on the column headers.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/my-feature`)
+3. Make your changes
+4. Commit your changes (`git commit -am 'Add new feature'`)
+5. Push to the branch (`git push origin feature/my-feature`)
+6. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or suggestions, feel free to contact [Your Name](mailto:youremail@example.com).
+
+
 
