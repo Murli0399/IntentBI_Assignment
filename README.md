@@ -60,6 +60,26 @@ This is a basic web app for managing car data. Users can add, view, update, and 
 
 ```
 
+## Frontend Folder Structure
+```
+F:
+└── IntentBI_Assignment
+    └── Frontend
+        ├── css
+        │   ├── index.css
+        │   ├── register.js
+        │   ├── car.js
+        │   └── modal.js
+        ├── js
+        │   ├── car.js
+        │   ├── register.js
+        │   └── index.js
+        ├── index.html
+        ├── car.html
+        └── register.html
+
+```
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
