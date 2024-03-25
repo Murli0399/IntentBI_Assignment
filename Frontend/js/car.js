@@ -2,6 +2,16 @@ const homeBtn = document.getElementById('index');
 let carId = localStorage.getItem('carId');
 const baseURL = "http://localhost:8080/api/cars/";
 
+let user = localStorage.getItem("intentBi");
+if (user != "admin@gmail.com") {
+    location.href = "inde.html";
+}
+
+document.getElementById("logout").addEventListener("click", () => {
+    localStorage.removeItem("intentBi");
+    location.href = 'index.html';
+})
+
 homeBtn.addEventListener('click', () => {
     location.href = 'index.html';
 })

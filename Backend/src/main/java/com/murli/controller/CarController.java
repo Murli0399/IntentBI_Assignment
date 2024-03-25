@@ -34,7 +34,7 @@ public class CarController {
     public ResponseEntity<String> uploadCars(@RequestParam("file") MultipartFile file) {
         try {
             List<Car> cars = jsonService.extractCarsFromJson(file);
-            jsonService.validateCars(cars);
+//            jsonService.validateCars(cars);
             jsonService.addCars(cars);
             return ResponseEntity.ok("Cars uploaded successfully!");
         } catch (Exception e) {

@@ -21,3 +21,29 @@
     "interior_color": "JET BLACK",
     "exterior_color": "Dark Slate Metallic"
 }
+
+// Car car = new Car();
+//                 car.setVin(node.get("vin").asText());
+//                 car.setYear(node.get("build").get("year").asInt());
+//                 car.setVehicleType(node.get("build").get("vehicle_type").asText());
+//                 car.setDrivetrain(node.get("build").get("drivetrain").asText());
+//                 car.setCylinders(node.get("build").get("cylinders").asInt());
+//                 car.setBodySubtype(node.get("build").get("body_subtype").asText());
+//                 car.setDoors(node.get("build").get("doors").asInt());
+//                 car.setMadeIn(node.get("build").get("made_in").asText());
+//                 car.setTrim(node.get("build").get("trim").asText());
+//                 car.setEngine(node.get("build").get("engine").asText());
+//                 car.setModel(node.get("build").get("model").asText());
+//                 car.setEngineSize(node.get("build").get("engine_size").asDouble());
+//                 car.setFuelType(node.get("build").get("fuel_type").asText());
+//                 car.setTrimR(node.get("build").get("trim_r").asText());
+//                 car.setMake(node.get("build").get("make").asText());
+//                 car.setPrice(node.get("price").asInt());
+//                 car.setSellerType(node.get("seller_type").asText());
+//                 car.setSource(node.get("source").asText());
+//                 car.setInteriorColor(node.get("interior_color").asText());
+//                 car.setExteriorColor(node.get("exterior_color").asText());
+
+//                 // Add the car to the list
+//                 cars.add(car);
+//                 System.out.println(car);

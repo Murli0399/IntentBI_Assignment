@@ -8,6 +8,16 @@ const message = document.getElementById('message');
 const cont = document.getElementById('tbody');
 const baseURL = "http://localhost:8080/api/cars";
 
+let user = localStorage.getItem("intentBi");
+if (user != "admin@gmail.com") {
+    document.getElementById('loginModal').style.display = "block";
+}
+
+document.getElementById("logout").addEventListener("click", () => {
+    localStorage.removeItem("intentBi");
+    location.href = 'index.html';
+})
+
 uploadJson.addEventListener('click', () => {
     myModal.style.display = 'block';
 })
@@ -16,56 +26,79 @@ addNewCar.addEventListener('click', () => {
     location.href = 'register.html';
 })
 
-fetch(baseURL + '/all')
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            throw new Error('Failed to fetch cars: ' + response.statusText);
+
+document.getElementById('login').addEventListener('click', () => {
+    const uname = document.getElementById('uname').value;
+    const pwd = document.getElementById('pwd').value;
+    if (uname == "admin@gmail.com") {
+        if (pwd == "123456") {
+            localStorage.setItem("intentBi", uname);
+            document.getElementById('loginModal').style.display = "none";
         }
-    })
-    .then(data => {
-        // Array to store cars
-        const carsArray = [];
+        else {
+            alert("Password Incorrect");
+        }
+    }
+    else {
+        alert("Username Incorrect");
+    }
 
-        // Iterate through the data and push each car to the array
-        data.forEach(car => {
-            const carObj = {
-                id: car.id,
-                vin: car.vin,
-                year: car.year,
-                vehicleType: car.vehicleType,
-                make: car.make,
-                model: car.model,
-                price: car.price,
-                sellerType: car.sellerType,
-                source: car.source,
-                interiorColor: car.interiorColor,
-                exteriorColor: car.exteriorColor,
-                drivetrain: car.drivetrain,
-                cylinders: car.cylinders,
-                bodySubtype: car.bodySubtype,
-                doors: car.doors,
-                madeIn: car.madeIn,
-                trim: car.trim,
-                engine: car.engine,
-                engineSize: car.engineSize,
-                fuelType: car.fuelType,
-                trimR: car.trimR
-            };
+})
 
-            carsArray.push(carObj);
+
+function loadPage() {
+    fetch(baseURL + '/all')
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Failed to fetch cars: ' + response.statusText);
+            }
+        })
+        .then(data => {
+            // Array to store cars
+            const carsArray = [];
+
+            // Iterate through the data and push each car to the array
+            data.forEach(car => {
+                const carObj = {
+                    id: car.id,
+                    vin: car.vin,
+                    year: car.year,
+                    vehicleType: car.vehicleType,
+                    make: car.make,
+                    model: car.model,
+                    price: car.price,
+                    sellerType: car.sellerType,
+                    source: car.source,
+                    interiorColor: car.interiorColor,
+                    exteriorColor: car.exteriorColor,
+                    drivetrain: car.drivetrain,
+                    cylinders: car.cylinders,
+                    bodySubtype: car.bodySubtype,
+                    doors: car.doors,
+                    madeIn: car.madeIn,
+                    trim: car.trim,
+                    engine: car.engine,
+                    engineSize: car.engineSize,
+                    fuelType: car.fuelType,
+                    trimR: car.trimR
+                };
+
+                carsArray.push(carObj);
+            });
+
+            console.log('Cars Array:', carsArray);
+            displayData(carsArray);
+            // Now you have an array of cars
+        })
+        .catch(error => {
+            console.error('Error occurred while fetching cars:', error);
+            // Handle network errors or other exceptions
         });
+}
 
-        console.log('Cars Array:', carsArray);
-        displayData(carsArray);
-        // Now you have an array of cars
-    })
-    .catch(error => {
-        console.error('Error occurred while fetching cars:', error);
-        // Handle network errors or other exceptions
-    });
-
+loadPage();
 
 function displayData(arr) {
     cont.innerHTML = null;
@@ -88,7 +121,7 @@ function displayData(arr) {
         td7.style.cursor = 'pointer';
         td7.style.color = 'blue';
         td7.addEventListener('click', () => {
-            localStorage.setItem('carId',el.id);
+            localStorage.setItem('carId', el.id);
             location.href = "car.html";
         })
         tr.append(td1, td2, td3, td4, td5, td6, td7);
@@ -135,19 +168,20 @@ uploadButton.addEventListener('click', function () {
                 if (response.ok) {
                     return response.text(); // Extract text from response
                 } else {
-                    console.log("Else Block" + response);
+                    console.log("Else Block " + response.message);
                     throw new Error('Error uploading file.');
                 }
             })
             .then(data => {
-                console.log("then Data Block" + data);
+                alert(data);
                 message.textContent = data; // Display response message
             })
             .catch(error => {
-                console.log("catch Block" + error);
+                console.log("catch Block " + error.message);
                 message.textContent = 'An error occurred: ' + error.message;
             });
     };
     reader.readAsText(selectedFile);
     myModal.style.display = 'none';
+    loadPage();
 });
