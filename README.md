@@ -41,6 +41,25 @@ This is a basic web app for managing car data. Users can add, view, update, and 
 - Existing cars can be updated or deleted by clicking on the corresponding buttons next to each car entry.
 - You can also sort the list of cars by clicking on the column headers.
 
+## Backend Folder Structure
+```
+    Backend
+        └── src
+            └── main
+                └── java
+                    └── com
+                        └── murli
+                            ├── controller
+                            │   └──CarController.java
+                            ├── entity
+                            ├── exceptions
+                            ├── repository
+                            ├── service
+                            │   └── impl
+                            └── JsonToWebApplication.java
+
+```
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
