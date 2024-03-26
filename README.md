@@ -20,6 +20,11 @@ This is a basic web app for managing car data. Users can add, view, update, and 
 - **Database**: MySQL, H2 (for testing)
 - **Other Tools**: Maven, Git
 
+## Login Credential
+
+username - admin@gmail.com   
+password - 123456
+
 ## Installation
 
 1. Clone the repository:
