@@ -11,6 +11,7 @@ This is a basic web app for managing car data. Users can add, view, update, and 
 - Paginate through the list of cars.
 - Update existing car information.
 - Delete cars from the database.
+- I managed custom validation for car entities.
 
 ## Technologies Used
 
